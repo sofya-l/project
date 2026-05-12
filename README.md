@@ -1,7 +1,12 @@
 # Adaptive & Responsive Design Project
 
 Учебный проект, демонстрирующий современные подходы к адаптивной и отзывчивой вёрстке с использованием HTML5, CSS3 и Tailwind CSS.
-Ссылка на проект: https://sofya-l.github.io/project/
+
+---
+
+##Ссылка на проект
+https://sofya-l.github.io/project/
+
 ---
 
 ## Описание проекта
