@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Responsive Design</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+
+      <!-- LOGO -->
+      <a href="index.html" class="text-2xl font-bold text-blue-600">
+        ResponsiveLab
+      </a>
+
+      <!-- DESKTOP NAVIGATION -->
+<nav class="hidden md:flex space-x-6">
+
+  <a href="index.html" class="hover:text-blue-500 transition">
+    Главная
+  </a>
+
+  <a href="about.html" class="hover:text-blue-500 transition">
+    О проекте
+  </a>
+
+  <a href="contact.html" class="hover:text-blue-500 transition">
+    Контакты
+  </a>
+
+</nav>
+
+      <!-- BURGER BUTTON -->
+      <button
+        id="burger-btn"
+        class="md:hidden text-3xl"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden bg-white border-t"
+    >
+
+      <nav class="flex flex-col p-4 gap-4 text-lg">
+
+        <a href="index.html">Главная</a>
+        <a href="about.html">О проекте</a>
+        <a href="contact.html">Контакты</a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="flex-1 max-w-7xl mx-auto w-full px-4 py-8">
+
+    <!-- GRID LAYOUT -->
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+      <!-- MAIN -->
+ <main class="lg:col-span-3">
+
+  <!-- HEADER -->
+  <section class="mb-16">
+
+    <span class="inline-block bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+      Mobile First Approach
+    </span>
+
+    <h1 class="text-4xl md:text-5xl font-bold mb-6">
+      Mobile First дизайн
+    </h1>
+
+    <p class="text-lg text-gray-600 leading-relaxed max-w-3xl">
+      Mobile First — это подход, при котором интерфейс сначала проектируется для мобильных устройств,
+      а затем расширяется для планшетов и десктопов.
+    </p>
+
+  </section>
+
+  <!-- BREAKPOINT EXPLANATION -->
+  <section class="bg-white rounded-3xl shadow-lg p-8 mb-12">
+
+    <h2 class="text-3xl font-bold mb-8">
+      Breakpoints в Tailwind
+    </h2>
+
+    <div class="space-y-6 text-gray-600">
+
+      <p><b>Mobile (по умолчанию):</b> без префикса</p>
+      <p><b>Tablet:</b> md: ≥ 768px</p>
+      <p><b>Desktop:</b> lg: ≥ 1024px</p>
+      <p><b>Large Desktop:</b> xl: ≥ 1280px</p>
+
+    </div>
+
+  </section>
+
+  <!-- RESPONSIVE DEMO -->
+  <section class="bg-white rounded-3xl shadow-lg p-8 mb-12">
+
+    <h2 class="text-3xl font-bold mb-8">
+      Пример адаптации
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+      <div class="bg-blue-100 p-6 rounded-2xl text-center">
+        <p class="font-bold">Mobile</p>
+        <p class="text-sm">1 колонка</p>
+      </div>
+
+      <div class="bg-green-100 p-6 rounded-2xl text-center">
+        <p class="font-bold">Tablet</p>
+        <p class="text-sm">2 колонки</p>
+      </div>
+
+      <div class="bg-purple-100 p-6 rounded-2xl text-center">
+        <p class="font-bold">Desktop</p>
+        <p class="text-sm">3 колонки</p>
+      </div>
+
+      <div class="bg-orange-100 p-6 rounded-2xl text-center">
+        <p class="font-bold">Wide</p>
+        <p class="text-sm">4 колонки</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- LAYOUT EXAMPLE -->
+  <section class="bg-white rounded-3xl shadow-lg p-8 mb-12">
+
+    <h2 class="text-3xl font-bold mb-8">
+      Flexbox адаптация
+    </h2>
+
+    <div class="flex flex-col md:flex-row gap-6">
+
+      <div class="flex-1 bg-gray-100 p-6 rounded-2xl">
+        <h3 class="font-bold mb-2">Блок 1</h3>
+        <p class="text-gray-600">Stack на mobile → row на desktop</p>
+      </div>
+
+      <div class="flex-1 bg-gray-100 p-6 rounded-2xl">
+        <h3 class="font-bold mb-2">Блок 2</h3>
+        <p class="text-gray-600">Flex адаптация</p>
+      </div>
+
+      <div class="flex-1 bg-gray-100 p-6 rounded-2xl">
+        <h3 class="font-bold mb-2">Блок 3</h3>
+        <p class="text-gray-600">Responsive layout</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MEDIA QUERY VS TAILWIND -->
+  <section class="bg-white rounded-3xl shadow-lg p-8">
+
+    <h2 class="text-3xl font-bold mb-8">
+      Как Tailwind заменяет media queries
+    </h2>
+
+    <div class="overflow-x-auto">
+
+      <table class="w-full border-collapse">
+
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="p-4 text-left">CSS</th>
+            <th class="p-4 text-left">Tailwind</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr class="border-t">
+            <td class="p-4">@media (min-width:768px)</td>
+            <td class="p-4">md:</td>
+          </tr>
+
+          <tr class="border-t">
+            <td class="p-4">@media (min-width:1024px)</td>
+            <td class="p-4">lg:</td>
+          </tr>
+
+          <tr class="border-t">
+            <td class="p-4">@media (min-width:1280px)</td>
+            <td class="p-4">xl:</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </section>
+
+</main>
+
+      <!-- SIDEBAR -->
+      <aside class="space-y-6">
+
+        <!-- CARD -->
+  <div class="bg-white p-6 rounded-2xl shadow-md">
+
+    <h2 class="text-2xl font-semibold mb-4">
+      Навигация
+    </h2>
+
+    <ul class="space-y-2">
+
+      <li>
+        <a href="mobile-first.html" class="block hover:text-blue-500 transition">
+          Mobile First
+        </a>
+      </li>
+
+      <li>
+        <a href="containers.html" class="block hover:text-blue-500 transition">
+          Container Queries
+        </a>
+      </li>
+
+      <li>
+        <a href="typography.html" class="block hover:text-blue-500 transition">
+          Fluid Typography
+        </a>
+      </li>
+
+      <li>
+        <a href="grid-flex.html" class="block hover:text-blue-500 transition">
+          Grid & Flexbox
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+        <!-- SUBSCRIBE -->
+        <div class="bg-white p-6 rounded-2xl shadow-md">
+
+          <h2 class="text-2xl font-semibold mb-4">
+            Подписка
+          </h2>
+
+          <form class="space-y-4">
+
+            <input
+              type="email"
+              placeholder="Ваш email"
+              class="w-full border rounded-lg px-4 py-2"
+              required
+            >
+
+            <button
+              class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition w-full"
+            >
+              Подписаться
+            </button>
+
+          </form>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white mt-12">
+
+    <div class="max-w-7xl mx-auto px-4 py-8">
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div>
+          <h3 class="text-xl font-bold mb-4">
+            ResponsiveLab
+          </h3>
+
+          <p>
+            Учебный проект по адаптивному дизайну.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold mb-4">
+            Контакты
+          </h3>
+
+          <p>Email: info@example.com</p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold mb-4">
+            Соцсети
+          </h3>
+
+          <p>GitHub</p>
+        </div>
+
+      </div>
+
+      <div class="border-t border-gray-700 mt-8 pt-4 text-center">
+        © 2026 ResponsiveLab
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

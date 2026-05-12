@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Responsive Design</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+
+      <!-- LOGO -->
+      <a href="index.html" class="text-2xl font-bold text-blue-600">
+        ResponsiveLab
+      </a>
+
+      <!-- DESKTOP NAVIGATION -->
+<nav class="hidden md:flex space-x-6">
+
+  <a href="index.html" class="hover:text-blue-500 transition">
+    Главная
+  </a>
+
+  <a href="about.html" class="hover:text-blue-500 transition">
+    О проекте
+  </a>
+
+  <a href="contact.html" class="hover:text-blue-500 transition">
+    Контакты
+  </a>
+
+</nav>
+
+      <!-- BURGER BUTTON -->
+      <button
+        id="burger-btn"
+        class="md:hidden text-3xl"
+        aria-label="Открыть меню"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+      
+
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden bg-white border-t"
+    >
+
+      <nav class="flex flex-col p-4 gap-4 text-lg">
+
+        <a href="index.html">Главная</a>
+        <a href="about.html">О проекте</a>
+        <a href="contact.html">Контакты</a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="flex-1 max-w-7xl mx-auto w-full px-4 py-8">
+
+    <!-- GRID LAYOUT -->
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+      <!-- MAIN -->
+     <main class="lg:col-span-3">
+
+  <!-- PAGE HEADER -->
+  <section class="mb-16">
+
+    <span
+      class="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-6"
+    >
+      Fluid Typography
+    </span>
+
+    <h1 class="fluid-title mb-8">
+      Современная адаптивная типографика
+    </h1>
+
+    <p class="fluid-text max-w-3xl">
+      Fluid Typography позволяет тексту плавно
+      адаптироваться между мобильными устройствами,
+      планшетами и desktop-экранами без резких
+      breakpoint-переходов.
+    </p>
+
+  </section>
+
+  <!-- TYPOGRAPHY EXAMPLE -->
+  <section
+    class="bg-white rounded-3xl shadow-lg p-8 mb-12"
+  >
+
+    <h2 class="text-3xl font-bold mb-8">
+      Пример fluid typography
+    </h2>
+
+    <div class="space-y-8">
+
+      <div>
+
+        <h3 class="fluid-subtitle">
+          Заголовок адаптируется автоматически
+        </h3>
+
+        <p class="fluid-text">
+          Размер текста плавно меняется в зависимости
+          от размеров viewport, сохраняя читаемость
+          на любых устройствах.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3 class="fluid-subtitle">
+          Улучшение readability
+        </h3>
+
+        <p class="fluid-text">
+          Fluid typography уменьшает необходимость
+          большого количества media queries
+          и делает дизайн более естественным.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- TYPOGRAPHY SCALE -->
+  <section
+    class="bg-white rounded-3xl shadow-lg p-8 mb-12"
+  >
+
+    <h2 class="text-3xl font-bold mb-8">
+      Typography Scale
+    </h2>
+
+    <div class="space-y-6">
+
+      <h1 class="text-6xl font-bold">
+        Heading 1
+      </h1>
+
+      <h2 class="text-5xl font-bold">
+        Heading 2
+      </h2>
+
+      <h3 class="text-4xl font-bold">
+        Heading 3
+      </h3>
+
+      <h4 class="text-3xl font-bold">
+        Heading 4
+      </h4>
+
+      <p class="text-xl leading-relaxed">
+        Большой размер текста улучшает читаемость в современных интерфейсах.
+      </p>
+
+      <p class="text-base leading-relaxed text-gray-600">
+        Обычный текст абзаца для стандартных блоков контента.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- READABILITY -->
+  <section
+    class="bg-white rounded-3xl shadow-lg p-8"
+  >
+
+    <h2 class="text-3xl font-bold mb-8">
+      Accessibility & Readability
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- CARD -->
+      <article
+        class="border rounded-2xl p-6"
+      >
+
+        <h3 class="text-2xl font-bold mb-4">
+          Хорошая читаемость
+        </h3>
+
+        <p class="leading-loose text-gray-600">
+          Правильная длина строки, достаточный line-height
+          и контрастность текста делают интерфейс
+          более доступным.
+        </p>
+
+      </article>
+
+      <!-- CARD -->
+      <article
+        class="border rounded-2xl p-6"
+      >
+
+        <h3 class="text-2xl font-bold mb-4">
+          Responsive spacing
+        </h3>
+
+        <p class="leading-loose text-gray-600">
+          Отступы и размеры элементов
+          должны адаптироваться вместе с текстом.
+        </p>
+
+      </article>
+
+    </div>
+
+  </section>
+
+</main>
+
+      <!-- SIDEBAR -->
+      <aside class="space-y-6">
+
+        <!-- CARD -->
+   <div class="bg-white p-6 rounded-2xl shadow-md">
+
+    <h2 class="text-2xl font-semibold mb-4">
+      Навигация
+    </h2>
+
+    <ul class="space-y-2">
+
+      <li>
+        <a href="mobile-first.html" class="block hover:text-blue-500 transition">
+          Mobile First
+        </a>
+      </li>
+
+      <li>
+        <a href="containers.html" class="block hover:text-blue-500 transition">
+          Container Queries
+        </a>
+      </li>
+
+      <li>
+        <a href="typography.html" class="block hover:text-blue-500 transition">
+          Fluid Typography
+        </a>
+      </li>
+
+      <li>
+        <a href="grid-flex.html" class="block hover:text-blue-500 transition">
+          Grid & Flexbox
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+        <!-- SUBSCRIBE -->
+        <div class="bg-white p-6 rounded-2xl shadow-md">
+
+          <h2 class="text-2xl font-semibold mb-4">
+            Подписка
+          </h2>
+
+          <form class="space-y-4">
+
+            <input
+              type="email"
+              placeholder="Ваш email"
+              class="w-full border rounded-lg px-4 py-2"
+              required
+            >
+
+            <button
+              class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition w-full"
+            >
+              Подписаться
+            </button>
+
+          </form>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white mt-12">
+
+    <div class="max-w-7xl mx-auto px-4 py-8">
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div>
+          <h3 class="text-xl font-bold mb-4">
+            ResponsiveLab
+          </h3>
+
+          <p>
+            Учебный проект по адаптивному дизайну.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold mb-4">
+            Контакты
+          </h3>
+
+          <p>Email: info@example.com</p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold mb-4">
+            Соцсети
+          </h3>
+
+          <p>GitHub</p>
+        </div>
+
+      </div>
+
+      <div class="border-t border-gray-700 mt-8 pt-4 text-center">
+        © 2026 ResponsiveLab
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
